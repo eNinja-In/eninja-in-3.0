@@ -14,7 +14,7 @@ import res from "/SOFTWARE_ENGINEER_SANJAY_RESUME.pdf"
 export default function FootBar() {
     return (
         <>
-            <div className="bg-black w-full flex items-center">
+            <div className="bg-black w-full flex items-center px-4">
                 <div className="bg-black w-full justify-between sm:flex sm:py-5 items-center ">
                     <div className="sm:w-[40%] w-full flex justify-around items-center max-sm:my-15 list-none">
                         <a className="w-[13%] text-left text-2xl text-amber-300 font-[myFont] hover:scale-110 hover:cursor-pointer " href="">_home</a>

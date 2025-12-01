@@ -9,6 +9,7 @@
 
 import { useState } from "react";
 import CV from "/SOFTWARE_ENGINEER_SANJAY_RESUME.pdf";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function NavBar() {
     };
 
     return (
-        <div className="bg-black w-full p-[1.5%] flex items-center relative">
+        <div className="bg-black w-full px-10 sm:py-7 flex items-center relative">
             <div className="max-sm:w-[85%] max-sm:text-center md:w-[40%] flex items-center">
                 <div className="text-green-700 text-5xl font-bold max-sm:text-5xl max-sm:p-5 font-[myFont] w-full">
                     <a href="/">//eNinja-In</a>
@@ -33,11 +34,11 @@ export default function NavBar() {
                 ${isOpen ? "top-24 opacity-100" : "top-[-500px] opacity-0 md:opacity-100 md:top-0"}`}>
 
                 <div className="w-full max-sm:p-5 flex justify-around items-center list-none max-sm:flex-col max-sm:justify-start">
-                    <a className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/#home">_home</a>
-                    <a className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/#home">_about</a>
-                    <a className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/#portfolio">_portfolio</a>
-                    <a className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-copy" href={CV} target="_blank">_resume</a>
-                    <a className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/#connectForm">_connect</a>
+                    <Link className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/">_home</Link>
+                    <Link className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/about">_about</Link>
+                    <Link className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/#portfolio">_portfolio</Link>
+                    <Link className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-copy" href={CV} target="_blank" >_resume</Link>
+                    <Link className="sm:w-[13%] w-full text-center text-4xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-3 hover:scale-120 hover:cursor-pointer" href="/#connectForm">_connect</Link>
                 </div>
             </div>
         </div>
