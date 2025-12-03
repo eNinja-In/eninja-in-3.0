@@ -30,29 +30,29 @@ export default function Home() {
                 <div className={`w-full transition-colors duration-710 ${bgActive ? "bg-[#090E1A]" : "bg-black"}`}>
                     <div className="flex max-sm:flex-wrap-reverse p-10 sm:py-40">
                         {/* Left Content */}
-                        <div className="sm:w-1/2">
+                        <div className="sm:w-1/2 ">
                             <p className='text-green-400 text-xl font-[myfont] bg-gray-600 w-fit px-4 py-1 my-5 rounded-2xl'>
                                 .Available for Freelance Work
                             </p>
-                            <h1 className='font-bold text-5xl text-white my-5'>Hi, I'm eNinja-In</h1>
+                            <h1 className='font-bold max-sm:text-center text-5xl text-white my-5'>Hi, I'm eNinja-In</h1>
                             <h2 className='w-full flex max-sm:justify-center font-[myfont] text-4xl text-green-500 h-10 my-5'>
                                 &lt;{currentText}&gt;
                             </h2>
                             <p className='flex text-2xl text-white italic my-5 font-[myfont]'>
                                 Dynamic MERN Stack Developer and Cybersecurity enthusiast with 2+ years of creating secure, high-performance applications. Skilled in React, Node.js, Express, MongoDB, Python, and strong logic building. GATE 2025 (CS) qualified, bringing solid fundamentals and a passion for crafting clean, impactful, and innovative digital experiences.
                             </p>
-                            <div className="flex gap-4">
-                                <button className="sm:w-1/7 rounded-2xl justify-center text-xl flex items-center bg-black text-white border-[3px] cursor-pointer hover:scale-110">
+                            <div className="flex gap-4 justify-center">
+                                <button className="sm:w-1/7 rounded-2xl justify-center text-xl flex items-center bg-black text-white border-[3px] cursor-pointer hover:scale-110 p-2">
                                     <ArrowIcon />Hire Me
                                 </button>
-                                <a className="sm:w-1/5 rounded-2xl justify-center text-xl flex items-center bg-white text-black border-[3px] cursor-pointer hover:scale-110 p-3" href={CV} download>
+                                <a className="sm:w-1/5 rounded-2xl justify-center text-xl flex items-center bg-white text-black border-[3px] cursor-pointer hover:scale-110 p-1 sm:p-3" href={CV} download>
                                     <UploadIcon />Download CV
                                 </a>
                             </div>
                         </div>
 
                         {/* Right Video & Text */}
-                        <div className="sm:w-1/2 relative">
+                        <div className="sm:w-1/2 relative ">
                             <video
                                 src={ImWatchingYou}
                                 autoPlay
@@ -60,7 +60,7 @@ export default function Home() {
                                 muted
                                 playsInline
                                 onEnded={(e) => { e.currentTarget.pause(); }}
-                                className="w-full rounded-xl max-sm:h-100"
+                                className="w-full rounded-xl max-sm:h-fit"
                             />
                             {textVisible && (
                                 <p className='max-sm:hidden absolute top-30 right-30 italic text-green-500 font-bold text-2xl px-4'>
@@ -74,7 +74,7 @@ export default function Home() {
                     <div className="flex p-10 max-sm:flex-wrap-reverse">
                         <div className="sm:w-1/2 w-full">
                             <p className="my-15 italic text-green-500 text-2xl font-[myfont] max-sm:hidden">// ABOUT ME</p>
-                            <h1 className="sm:w-fit w-full text-5xl text-white font-bold pb-10 border-b-2 border-white font-[myfont]">Crafting Meaningful Digital Experiences</h1>
+                            <h1 className="sm:w-fit w-full text-5xl text-center text-white font-bold pb-10 border-b-2 border-white font-[myfont]">Crafting Meaningful Digital Experiences</h1>
                             <p className="w-full text-2xl italic text-white py-10 font-[myfont]">
                                 Passionate about building modern, intuitive, and performance-driven digital solutions.
                                 I enjoy transforming ideas into seamless user experiences through clean design and
@@ -116,8 +116,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-[url('/bg.jpg')] max-h-fit max-sm:bg-center bg-cover w-full bg-fixed pt-50">
-                <div className="w-full h-fit bg-black p-20">
+            <div className="bg-[url('/bg.jpg')] max-h-fit max-sm:bg-center bg-cover sm:w-full bg-fixed pt-50">
+                <div className="w-full h-fit bg-black sm:p-20 p-10" >
                     <div className="text-center mb-16">
                         <h1 className="text-5xl text-white font-bold mb-4">Featured Work</h1>
                         <p className="text-gray-300 max-w-2xl mx-auto text-lg">
@@ -126,7 +126,7 @@ export default function Home() {
                     </div>
 
                     {/* Dynamic Grid */}
-                    <div className="w-full px-30 flex gap-10">
+                    <div className="w-full sm:px-10 sm:flex sm:gap-10">
                         {projectsData.map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}
@@ -205,7 +205,7 @@ function ExternalLinkIcon({ size = 64, color = "#ffffff" }) {
 
 function ProjectCard({ project }) {
     return (
-        <div className="w-1/3 min-h-fit max-h- bg-black rounded-2xl p-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+        <div className="sm:w-1/3 w-full min-h-fit bg-black rounded-2xl mb-4 p-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105">
 
             {/* Image */}
             <div className="w-full h-52 rounded-xl bg-cover bg-center mb-6 border-2 border-white" style={{ backgroundImage: `url(${project.image})` }} />
@@ -256,23 +256,23 @@ function ProjectCard({ project }) {
 const projectsData = [
     {
         id: 1,
-        title: "Portfolio Website",
+        title: "VirusViper",
         description:
-            "A modern portfolio built with React and TailwindCSS. Optimized for speed and smooth visual experience.",
-        image: "/images/project1.jpg",
-        tech: ["React", "Tailwind", "Framer Motion"],
-        github: "https://github.com/user/portfolio",
-        demo: "https://portfolio.com",
+            "VirusViper, a MERN-based platform with AI chatbot, 3D model, threat detection, and safety tips, won 1st place at Haryana district level..",
+        image: "/images/virusviper.png",
+        tech: ["MongoDB", "Express.js", "React", "Node.js", "LLM", "LLaMA", "VirusTotal API"],
+        github: "https://github.com/eNinja-In/VirusViper",
+        demo: "https://virusviper.onrender.com",
     },
     {
         id: 2,
-        title: "E-Commerce Platform",
+        title: "Liquor Management System",
         description:
-            "Full-stack MERN e-commerce application with authentication, cart, payments, and admin panel.",
-        image: "/images/project2.jpg",
+            "Liquor Management System using HTML, CSS, and JavaScript for inventory tracking, sales processing, and reports.",
+        image: "/images/liquarManagementSystem.png",
         tech: ["MongoDB", "Express", "React", "Node"],
-        github: "https://github.com/user/ecommerce",
-        demo: "https://ecommerce-demo.com",
+        github: "https://github.com/eNinja-In/liquarManagementSystem",
+        demo: "https://eninja-in.github.io/liquarManagementSystem",
     },
     {
         id: 3,
