@@ -34,12 +34,12 @@ export default function NavBar() {
                 ${isOpen ? "top-24 opacity-100 z-10" : "top-[-500px] opacity-0 md:opacity-100 md:top-0"}`}>
 
                 <div className="w-full max-sm:p-5 flex justify-around items-center list-none max-sm:flex-col max-sm:justify-start">
-                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" href="/">_home</Link>
-                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" href="/about">_about</Link>
-                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" href="/portfolio">_portfolio</Link>
-                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" href="https://eninja-in.blogspot.com" target="_blank">_blog</Link>
-                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-copy" href={CV} target="_blank" >_resume</Link>
-                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" href="/connectForm">_connect</Link>
+                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" onClick={toggleMenu} to="/">_home</Link>
+                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" onClick={toggleMenu} to="about">_about</Link>
+                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" onClick={toggleMenu} to="/portfolio">_portfolio</Link>
+                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" onClick={toggleMenu} to="https://eninja-in.blogspot.com" target="_blank">_blog</Link>
+                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" onClick={toggleMenu} to={CV} target="_blank" >_resume</Link>
+                    <Link className="sm:w-[13%] w-full  text-center text-3xl sm:text-3xl text-amber-300 font-[myFont] max-sm:m-2 hover:scale-120 hover:cursor-pointer" onClick={toggleMenu} to="/connectForm">_connect</Link>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ export default function ConnectForm() {
             <div className="w-full bg-gray-900 font-[myFont]">
                 <div className="w-full py-10 flex justify-center">
                     <form action="" className="sm:w-[60%] flex flex-wrap ">
-                        <div className="w-full text-center">
+                        <div className="w-full text-center max-sm:p-10">
                             <h1 className="sm:text-8xl text-6xl text-white">&lt; contact_me &gt;</h1>
                             <p className="sm:text-3xl text-2xl text-amber-300">...Establish a secure TCP connection and upload your digital thoughts to my console.</p>
                         </div>

@@ -41,7 +41,7 @@ export default function Home() {
                             <p className='flex text-2xl text-white italic my-5 font-[myfont]'>
                                 Dynamic MERN Stack Developer and Cybersecurity enthusiast with 2+ years of creating secure, high-performance applications. Skilled in React, Node.js, Express, MongoDB, Python, and strong logic building. GATE 2025 (CS) qualified, bringing solid fundamentals and a passion for crafting clean, impactful, and innovative digital experiences.
                             </p>
-                            <div className="flex gap-4 justify-center">
+                            <div className="flex gap-4 max-sm:justify-center">
                                 <button className="sm:w-1/7 rounded-2xl justify-center text-xl flex items-center bg-black text-white border-[3px] cursor-pointer hover:scale-110 p-2">
                                     <ArrowIcon />Hire Me
                                 </button>
@@ -131,6 +131,9 @@ export default function Home() {
                             <ProjectCard key={project.id} project={project} />
                         ))}
                     </div>
+                    <div className="w-full flex justify-center pt-10">
+                    <button className='sm:w-1/10 bg-green-500 hover:bg-green-600 hover:cursor-pointer text-white px-2 py-3 text-xl font-bold rounded-xl'>See All</button>
+                    </div>
 
                 </div>
 
@@ -205,7 +208,7 @@ function ExternalLinkIcon({ size = 64, color = "#ffffff" }) {
 
 function ProjectCard({ project }) {
     return (
-        <div className="sm:w-1/3 w-full min-h-fit bg-black rounded-2xl mb-4 p-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+        <div className="sm:w-1/4 w-full min-h-fit bg-black rounded-2xl mb-4 p-6 border-2 border-white shadow-xl hover:shadow-2xl transition-all hover:scale-105">
 
             {/* Image */}
             <div className="w-full h-52 rounded-xl bg-cover bg-center mb-6 border-2 border-white" style={{ backgroundImage: `url(${project.image})` }} />
@@ -221,7 +224,7 @@ function ProjectCard({ project }) {
                 {project.tech.map((item, index) => (
                     <span
                         key={index}
-                        className="bg-blue-500 text-white rounded-full px-4 py-1 text-sm"
+                        className="bg-blue-500 text-white rounded-full px-4 py-1 text-sm cursor-default "
                     >
                         {item}
                     </span>
@@ -270,7 +273,7 @@ const projectsData = [
         description:
             "Liquor Management System using HTML, CSS, and JavaScript for inventory tracking, sales processing, and reports.",
         image: "/images/liquarManagementSystem.png",
-        tech: ["MongoDB", "Express", "React", "Node"],
+        tech: ["HTML", "CSS", "JvaScript"],
         github: "https://github.com/eNinja-In/liquarManagementSystem",
         demo: "https://eninja-in.github.io/liquarManagementSystem",
     },
@@ -280,7 +283,17 @@ const projectsData = [
         description:
             "A ChatGPT-powered AI assistant built with OpenAI API, React, and vector search.",
         image: "/images/project3.jpg",
-        tech: ["React", "OpenAI API", "Node.js"],
+        tech: ["React", "OpenAI API", "Node.js", "Express", "Pinecone"],
+        github: "https://github.com/user/ai-chat",
+        demo: "https://ai-chat.com",
+    },
+    {
+        id: 4,
+        title: "AI Chat Assistant",
+        description:
+            "A ChatGPT-powered AI assistant built with OpenAI API, React, and vector search.",
+        image: "/images/project3.jpg",
+        tech: ["React", "OpenAI API", "Node.js", "Express", "Pinecone"],
         github: "https://github.com/user/ai-chat",
         demo: "https://ai-chat.com",
     },
